@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-cream: #FDFBF7;
+  --color-brand-moss: #2D4739;
+  --color-brand-sage: #5C8D73;
+  --color-brand-wood: #8B5E3C;
+  --color-brand-spruce: #1A2E24;
+  --color-brand-clay: #E8E2D9;
+  --color-brand-sand: #FBF9F4;
+  --color-brand-earth: #5B635F;
+  --color-brand-darkgreen: #121E17;
+  --color-brand-darkcard: #1C2D24;
+  --color-brand-darkborder: #2B4034;
+
+  --font-serif: "Lora", "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+  /* Dynamic entry fades */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  /* Slow rotate for radial maps grounding indicators */
+  @keyframes spinSlow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-spin-slow {
+    animation: spinSlow 12s linear infinite;
+  }
+
+  /* Premium scrollbars */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(92, 141, 115, 0.25);
+    border-radius: 99px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(92, 141, 115, 0.5);
+  }
+
+  .logo-container {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    height: auto;
+    margin-top: 0;
+    top: auto;
+    overflow: visible;
+  }
+}
+
+
