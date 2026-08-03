@@ -32,24 +32,18 @@ import tailwindcss from '@tailwindcss/vite';
 import path from 'path';
 
 export default defineConfig({
-  plugins: [
-    react(),
-    tailwindcss(),
-  ],
-
-  // Required for GitHub Pages
-  base: '/Tree-Market-AI/',
-
-  define: {
-    'process.env.GOOGLE_MAPS_PLATFORM_KEY': JSON.stringify(
-      process.env.GOOGLE_MAPS_PLATFORM_KEY || ''
-    ),
-  },
+  plugins: [react(), tailwindcss()],
 
   resolve: {
     alias: {
       '@': path.resolve(__dirname, '.'),
     },
+  },
+
+  define: {
+    'process.env.GOOGLE_MAPS_PLATFORM_KEY': JSON.stringify(
+      process.env.GOOGLE_MAPS_PLATFORM_KEY || ''
+    ),
   },
 
   server: {
