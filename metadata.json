@@ -1,0 +1,8 @@
+{
+  "name": "TreeMarket AI India",
+  "description": "TreeMarket AI India is an AI-powered digital marketplace connecting farmers, buyers, timber industries, transporters, and businesses across India. Designed, Developed and Maintained by Arun Rathaur.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
