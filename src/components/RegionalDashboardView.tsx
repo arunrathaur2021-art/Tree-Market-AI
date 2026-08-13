@@ -52,7 +52,7 @@ export default function RegionalDashboardView({ user, darkMode, setView }: Regio
       setLoading(false);
     }
   };
-  const schemeInfo = REGIONAL_SCHEMES_DATA[selectedRegion.ste.toLowerCase()] || REGIONAL_SCHEMES_DATA["haryana"];
+  const schemeInfo = REGIONAL_SCHEMES_DATA[(selectedRegion.state || "Haryana").toLowerCase()] || REGIONAL_SCHEMES_DATA["haryana"];
 
   // Mock regional price ticker data for selected state
   const regionalPrices = [
