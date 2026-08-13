@@ -35,7 +35,7 @@ export const RegionProvider: React.FC<{
     const saved = localStorage.getItem('treemarket_region');
     if (saved) {
       try {
-        return JSON.parse(saved);
+        return { ...DEFAULT_REGION, ...JSON.parse(saved) };
       } catch (e) {
         console.error('Failed to parse saved region:', e);
       }
