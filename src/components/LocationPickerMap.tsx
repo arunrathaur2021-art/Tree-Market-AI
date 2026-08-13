@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'; import MapSafe from './MapSafe';
 import { APIProvider, Map, AdvancedMarker, Pin } from '@vis.gl/react-google-maps';
 import { MapPin, Navigation, Crosshair, Check, AlertCircle } from 'lucide-react';
 import { parseGpsCoords, getEstimatedLocationCoords } from '../data/indiaLocations';
@@ -98,7 +98,7 @@ export default function LocationPickerMap({
       {/* Map View */}
       <div className="relative w-full h-52 rounded-xl overflow-hidden border border-brand-clay/50 shadow-inner mb-3">
         {hasValidKey ? (
-          <APIProvider apiKey={GOOGLE_MAPS_KEY} version="weekly">
+          <MapSafe><APIProvider apiKey={GOOGLE_MAPS_KEY} version="weekly">
             <Map
               center={coords}
               zoom={13}

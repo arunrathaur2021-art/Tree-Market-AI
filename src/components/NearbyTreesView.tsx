@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react'; import MapSafe from './MapSafe';
 import { MapPin, Navigation, Filter, ArrowUpDown, Trees, MessageSquare, ExternalLink, Loader2, Search, SlidersHorizontal, Map, Grid } from 'lucide-react';
 import { APIProvider, Map as GoogleMap, AdvancedMarker, Pin } from '@vis.gl/react-google-maps';
 import { Tree, User } from '../types';
@@ -251,7 +251,7 @@ export default function NearbyTreesView({
       {viewMode === 'map' && (
         <div className="w-full h-[65vh] rounded-2xl overflow-hidden border border-brand-clay/60 shadow-lg mb-6 relative">
           {hasValidKey ? (
-            <APIProvider apiKey={GOOGLE_MAPS_KEY} version="weekly">
+            <MapSafe><APIProvider apiKey={GOOGLE_MAPS_KEY} version="weekly">
               <GoogleMap
                 center={buyerCoords}
                 zoom={radiusKm <= 20 ? 11 : radiusKm <= 50 ? 9 : 7}
