@@ -118,7 +118,7 @@ export default function LocationPickerMap({
                 <Pin background="#2D5A27" glyphColor="#FFFFFF" borderColor="#1E3E1A" />
               </AdvancedMarker>
             </Map>
-          </APIProvider>
+          </APIProvider></MapSafe>
         ) : (
           <div className="w-full h-full bg-gradient-to-br from-emerald-900/10 to-teal-900/20 dark:from-brand-darkborder/50 dark:to-brand-darkcard/80 flex flex-col items-center justify-center p-4 text-center">
             <MapPin className="w-8 h-8 text-brand-sage mb-2 animate-bounce" />

@@ -279,7 +279,7 @@ export default function NearbyTreesView({
                   </AdvancedMarker>
                 ))}
               </GoogleMap>
-            </APIProvider>
+            </APIProvider></MapSafe>
           ) : (
             <div className="w-full h-full bg-gradient-to-br from-brand-moss/20 to-emerald-900/40 flex flex-col items-center justify-center p-6 text-center">
               <Trees className="w-16 h-16 text-brand-sage animate-bounce mb-3" />
