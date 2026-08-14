@@ -293,7 +293,7 @@ export default function RegionSelectorModal({ darkMode = false }: RegionSelector
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/80 backdrop-blur-md overflow-y-auto animate-fadeIn">
-      <div className={`relative w-full max-w-3xl rounded-3xl border shadow-2xl overflow-hidden my-6 ${
+      <div className={`relative w-full min-w-0 max-w-3xl rounded-3xl border shadow-2xl overflow-hidden my-6 ${
         darkMode ? 'bg-brand-darkcard border-brand-darkborder text-slate-100' : 'bg-white border-slate-200 text-slate-900'
       }`}>
         {/* Top Decorative Header */}
@@ -333,7 +333,7 @@ export default function RegionSelectorModal({ darkMode = false }: RegionSelector
         <div className="p-5 sm:p-6 space-y-6 max-h-[82vh] overflow-y-auto">
 
           {/* Tab Switcher: 3 Navigation Options */}
-          <div className="grid grid-cols-3 gap-2 p-1.5 rounded-2xl bg-slate-800/40 border border-slate-700/50">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 p-1.5 rounded-2xl bg-slate-800/40 border border-slate-700/50">
             <button
               type="button"
               onClick={() => setActiveTab('address')}
