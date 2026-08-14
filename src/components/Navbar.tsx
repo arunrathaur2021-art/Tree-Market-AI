@@ -58,9 +58,9 @@ export default function Navbar({
           : 'bg-white/95 border-brand-clay text-brand-moss'
       } backdrop-blur-md`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between min-h-[4.25rem] py-2.5">
+          <div className="flex flex-wrap items-center justify-between gap-2 min-h-[4.25rem] py-2.5">
             {/* Logo & Active Region Selector Badge */}
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-2 min-w-0">
               <button 
                 onClick={() => setView('home')} 
                 className="logo-container pt-4 pb-2 h-auto flex items-center gap-2.5 group cursor-pointer focus:outline-none overflow-visible"
@@ -73,7 +73,7 @@ export default function Navbar({
                   <span className="text-xl sm:text-2xl font-serif font-bold tracking-tight block leading-tight">
                     TreeMarket <span className="text-brand-sage font-sans font-bold text-base sm:text-lg">AI</span>
                   </span>
-                  <span className="text-[9px] sm:text-[10px] font-sans text-brand-earth tracking-wide block leading-snug">
+                  <span className="text-[9px] sm:text-[10px] font-sans text-brand-earth tracking-wide leading-snug hidden sm:block">
                     India • Designed & Developed by Arun Rathaur
                   </span>
                 </div>
@@ -99,9 +99,8 @@ export default function Navbar({
                 </span>
               </button>
             </div>
-
             {/* Navigation Items */}
-            <nav className="hidden md:flex items-center gap-5 text-sm font-medium">
+            <nav className="flex items-center gap-5 text-sm font-medium overflow-x-auto w-full md:w-auto order-last md:order-none pb-1 md:pb-0">
               <button
                 onClick={() => setView('regional-dashboard')}
                 className={`flex items-center gap-1.5 transition-colors py-1 cursor-pointer focus:outline-none ${
